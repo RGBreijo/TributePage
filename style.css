@@ -1,7 +1,6 @@
 
 :root{
     --darkFontGray: #333333;
-    --textInfoColor: 
     
 }
 body, h1, h2{
@@ -11,6 +10,9 @@ body, h1, h2{
 }
 
 #main{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
     background-color: #EEEEEE;
 }
 
@@ -48,6 +50,8 @@ header p{
 
 #image{
     width: 95%;
+    max-width: 1024px;
+    max-height: 623px;
 }
 
 #img-caption{
@@ -71,14 +75,16 @@ header p{
     
 }
 
+
+
 .year{
     font-weight: bold;
 }
 
-#tribute-info p{
-    /* set a max width  */
-    font-weight: 100;
+#tribute-info ul{
+    max-width: 500px;
 }
+
 #tribute-info li{
     color: var(--darkGray);
     font-size: 1em;
@@ -89,18 +95,18 @@ header p{
 }
 
 
+/* mobile tribute info  */
+
 blockquote{
-    width: 80%;
-    margin: 1em;
+    max-width: 500px;
     line-height: 1.5em;
     font-style: italic;
     opacity: 0.8;
 }
 
 
-
 .learn-more{
-        opacity: 0.8;
+    opacity: 0.8;
     margin-left: 1em;
     margin-right: 1em;
     padding-bottom: 2em;
@@ -114,3 +120,12 @@ blockquote{
 .learn-more p{
     margin: 0; 
 }
+
+
+@media only screen and (min-width: 450px){
+
+    #main{
+        margin-top: 2em;
+    }
+}
+
